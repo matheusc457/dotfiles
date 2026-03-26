@@ -19,3 +19,5 @@ alias cls='clear'
 eval "$(zoxide init bash)"
 
 eval "$(oh-my-posh init bash --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/powerlevel10k_lean.omp.json')"
+
+[[ -r /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
