@@ -1,0 +1,11 @@
+font=Inter 10
+backgroud-color=#1e1e2e
+text-color=#cdd6f4
+padding=10
+border-radius=8
+default-timeout=5000
+show-age=false
+ignore-messages=()
+anchor=top-right
+margin=10
+spacing=5
