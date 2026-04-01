@@ -14,11 +14,12 @@ alias dot='git -C ~/Projetos/dotfiles'
 PS1='[\u@\h \W]\$ '
 alias cls='clear'
 
-# eval "$(starship init bash)"
+eval "$(starship init bash)"
 
 eval "$(zoxide init bash)"
 
-eval "$(oh-my-posh init bash --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/powerlevel10k_lean.omp.json')"
+#eval "$(oh-my-posh init bash --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/powerlevel10k_lean.omp.json')"
+#eval "$(oh-my-posh init bash --config 'https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/atomicBit.omp.json')"
 
 [[ -r /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
 
