@@ -14,7 +14,7 @@ alias dot='git -C ~/Projetos/dotfiles'
 PS1='[\u@\h \W]\$ '
 alias cls='clear'
 
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
 
 eval "$(zoxide init bash)"
 
