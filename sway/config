@@ -30,7 +30,7 @@ default_border pixel 2
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg /home/matheus/Downloads/gruvbox.png fill
-output * bg /home/matheus/Downloads/wallpaper.png fill
+output * bg /home/matheus/Downloads/wallpapers/black_hole-wallpaper.png fill
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #
 # Example configuration:
