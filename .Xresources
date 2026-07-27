@@ -1,0 +1,89 @@
+! ==========================================
+! URxvt - Config
+! ==========================================
+
+! Font
+URxvt.font: xft:JetBrainsMono Nerd Font:size=12
+! URxvt.font: xft:CaskaydiaCove Nerd Font Mono:size=13
+
+! Terminal
+URxvt.termName: rxvt-unicode-256color
+URxvt.internalBorder: 0 
+URxvt.saveLines: 10000
+URxvt.scrollBar: false
+URxvt.cursorBlink: false
+URxvt.secondaryScroll: false
+URxvt.scrollTtyOutput: false
+URxvt.scrollTtyKeypress: true
+! URxvt.iso14755: false
+URxvt.depth: 32
+
+! Cursor
+! URxvt.cursorColor: #f5e0dc
+
+! Simple Dark Theme
+URxvt.background: #101010
+URxvt.foreground: #eeeeee
+URxvt.cursorColor: #ffffff
+
+! Normal colors
+URxvt.color0:  #000000
+URxvt.color1:  #cc0000
+URxvt.color2:  #00aa00
+URxvt.color3:  #aaaa00
+URxvt.color4:  #3465a4
+URxvt.color5:  #75507b
+URxvt.color6:  #06989a
+URxvt.color7:  #d3d7cf
+
+! Bright colors
+URxvt.color8:  #555753
+URxvt.color9:  #ef2929
+URxvt.color10: #8ae234
+URxvt.color11: #fce94f
+URxvt.color12: #729fcf
+URxvt.color13: #ad7fa8
+URxvt.color14: #34e2e2
+URxvt.color15: #ffffff
+
+! Fundo e texto
+! URxvt.background: #1e1e2e
+! URxvt.foreground: #cdd6f4
+
+! Catppuccin Mocha Palette
+! URxvt.color0:  #45475a
+! URxvt.color1:  #f38ba8
+! URxvt.color2:  #a6e3a1
+! URxvt.color3:  #f9e2af
+! URxvt.color4:  #89b4fa
+! URxvt.color5:  #f5c2e7
+! URxvt.color6:  #94e2d5
+! URxvt.color7:  #bac2de
+
+! URxvt.color8:  #585b70
+! URxvt.color9:  #f38ba8
+! URxvt.color10: #a6e3a1
+! URxvt.color11: #f9e2af
+! URxvt.color12: #89b4fa
+! URxvt.color13: #f5c2e7
+! URxvt.color14: #94e2d5
+! URxvt.color15: #a6adc8
+
+! Perl extensions
+URxvt.perl-ext-common: default,matcher,clipboard,-confirm-paste
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+
+URxvt.urlLauncher: xdg-open
+URxvt.matcher.button: 1
+
+! Select
+URxvt.selectToClipboard: true
+
+! Bell
+URxvt.visualBell: true
+URxvt.urgentOnBell: false
+URxvt.skipBuiltinGlyphs: true

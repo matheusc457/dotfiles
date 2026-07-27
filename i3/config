@@ -4,7 +4,6 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -16,10 +15,18 @@ set $mod Mod4
 font pango:Caskaydia Cove Nerd Font 12
 
 # Custom Resolution
-exec --no-startup-id xrandr --newmode "1280x720_60.00"   74.50  1280 1344 1472 1664  720 723 728                        748 -hsync +vsync
-exec --no-startup-id xrandr --addmode LVDS-1 "1280x720_60.00"
-exec --no-startup-id xrandr --output LVDS-1 --mode 1280x720_60.00
+# exec_always --no-startup-id xrandr --newmode "1280x720_60.00"   74.50  1280 1344 1472 1664  720 723 728                        748 -hsync +vsync
+# exec_always --no-startup-id xrandr --addmode LVDS-1 "1280x720_60.00"
+# exec_always --no-startup-id xrandr --output LVDS-1 --mode 1280x720_60.00
 
+exec_always --no-startup-id xset s off
+exec_always --no-startup-id xset -dpms
+exec_always --no-startup-id xset s noblank
+
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-scale /home/matheus/wallpapers/black_hole-wallpaper.png
+exec_always --no-startup-id xrdb -merge ~/.Xresources
+exec_always --no-startup-id xmodmap ~/.Xmodmap
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -58,18 +65,24 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+# start firefox
+bindsym $mod+f exec firefox
+
+# start rofi (a program launcher)
+#bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun
+
+# start i3lock-color
+bindsym $mod+Shift+l exec --no-startup-id ~/.config/i3/lock.sh
+
+
+# suspend
+bindsym $mod+Shift+f exec systemctl suspend
 
 # change focus
 bindsym $mod+j focus left
@@ -86,7 +99,7 @@ bindsym $mod+Right focus right
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
@@ -102,7 +115,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+#bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -194,6 +207,6 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+#bar {
+#        status_command i3status
+#}
