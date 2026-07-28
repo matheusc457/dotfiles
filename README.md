@@ -1,5 +1,5 @@
 ## Dotfiles
-My personal dotfiles for Arch Linux + Sway.
+My personal dotfiles for my Arch Linux setup.
 
 ## About
 This repository was created to store and preserve my dotfiles to use as a backup, feel free to use!
