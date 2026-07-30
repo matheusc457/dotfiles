@@ -15,9 +15,10 @@ set $mod Mod4
 font pango:Caskaydia Cove Nerd Font 12
 
 # Custom Resolution
-exec_always --no-startup-id xrandr --newmode "1280x720_60.00"   74.50  1280 1344 1472 1664  720 723 728 748 -hsync +vsync
-exec_always --no-startup-id xrandr --addmode LVDS-1 "1280x720_60.00"
-exec_always --no-startup-id xrandr --output LVDS-1 --mode "1280x720_60.00"
+exec_always --no-startup-id ~/.config/i3/resolution.sh
+# exec_always --no-startup-id xrandr --newmode "1280x720_60.00"   74.50  1280 1344 1472 1664  720 723 728 748 -hsync +vsync
+# exec_always --no-startup-id xrandr --addmode LVDS-1 "1280x720_60.00"
+# exec_always --no-startup-id xrandr --output LVDS-1 --mode "1280x720_60.00"
 
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
@@ -26,7 +27,8 @@ exec_always --no-startup-id xset s noblank
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale /home/matheus/wallpapers/black_hole-wallpaper.png
 exec_always --no-startup-id xrdb -merge ~/.Xresources
-exec_always --no-startup-id xmodmap ~/.Xmodmap
+# exec_always --no-startup-id xmodmap ~/.Xmodmap
+exec_always --no-startup-id sh -c "setxkbmap br && xmodmap ~/.Xmodmap"
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -48,7 +50,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Set brazilian keyboard
-exec --no-startup-id setxkbmap br
+# exec_always --no-startup-id setxkbmap br
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
