@@ -15,8 +15,11 @@ set $mod Mod4
 font pango:Caskaydia Cove Nerd Font 12
 
 default_border pixel 2
-gaps inner 5
-gaps outer 5
+default_floating_border pixel 2
+gaps inner 8
+gaps outer 4
+
+hide_edge_borders both
 
 # Custom Resolution
 exec_always --no-startup-id ~/.config/i3/resolution.sh
@@ -29,8 +32,8 @@ exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
 exec_always --no-startup-id xset s noblank
 
-exec_always --no-startup-id feh --bg-scale /home/matheus/wallpapers/black_hole-wallpaper.png
-exec_always --no-startup-id xrdb -merge ~/.Xresources
+# exec_always --no-startup-id feh --bg-scale /home/matheus/wallpapers/black_hole-wallpaper.png
+exec_always --no-startup-id xrdb -load ~/.Xresources
 # exec_always --no-startup-id xmodmap ~/.Xmodmap
 #exec_always --no-startup-id sh -c "setxkbmap br && xmodmap ~/.Xmodmap"
 
@@ -63,6 +66,17 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# Nord colors
+
+client.focused          #88C0D0 #2E3440 #ECEFF4 #88C0D0 #88C0D0
+client.focused_inactive #4C566A #2E3440 #D8DEE9 #4C566A #4C566A
+client.unfocused        #3B4252 #2E3440 #D8DEE9 #3B4252 #3B4252
+client.urgent           #BF616A #2E3440 #ECEFF4 #BF616A #BF616A
+client.placeholder      #434C5E #2E3440 #D8DEE9 #434C5E #434C5E
+
+client.background       #2E3440
+
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -85,7 +99,6 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # start i3lock-color
 bindsym $mod+Shift+l exec --no-startup-id ~/.config/i3/lock.sh
-
 
 # suspend
 bindsym $mod+Shift+f exec systemctl suspend

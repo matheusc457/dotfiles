@@ -15,3 +15,6 @@ fi
 
 # Apply the resolution
 xrandr --output "$OUTPUT" --mode "$MODE"
+
+# Wallpaper
+sleep 2 && feh --bg-fill /home/matheus/wallpapers/astronaut.png
