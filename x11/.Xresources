@@ -7,8 +7,10 @@ XTerm*faceName: CaskaydiaCove Nerd Font Mono
 XTerm*faceSize: 14
 
 ! Remove internal border
-XTerm*internalBorder: 0
+XTerm*internalBorder: 6
 XTerm*borderWidth: 0
+
+xterm*cursorBlink: true
 
 ! Scroll to bottom when typing
 xterm*scrollKey: true
