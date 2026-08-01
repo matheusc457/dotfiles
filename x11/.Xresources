@@ -10,6 +10,10 @@ XTerm*faceSize: 14
 XTerm*internalBorder: 0
 XTerm*borderWidth: 0
 
+! Scroll to bottom when typing
+xterm*scrollKey: true
+xterm*scrollTtyOutput: false
+
 ! VT Font Menu: Unreadable
 XTerm*faceSize1: 8
 ! VT Font Menu: Tiny
