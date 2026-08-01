@@ -16,6 +16,20 @@ This repository was created to store and preserve my dotfiles to use as a backup
 - .Xresources (XTerm config)
 - .vimrc (Vim config)
 - .bashrc (Bash config)
+
+## Requirements
+- stow
+- sway
+- i3
+- polybar
+- mako
+- foot
+- waybar
+- fastfetch
+- rofi
+- xterm
+- A Nerd Font: [CaskaydiaCove Nerd Font](https://www.nerdfonts.com/font-downloads) and [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
+
 ## Installation
 These dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
@@ -23,6 +37,11 @@ These dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/).
 git clone https://github.com/matheusc457/dotfiles ~/dotfiles
 cd ~/dotfiles
 stow bash vim x11 fastfetch foot i3 mako polybar rofi sway waybar wallpapers
+```
+
+After stowing, make all shell scripts executable:
+```bash
+find ~/dotfiles -name "*.sh" -exec chmod +x {} \;
 ```
 
 ## License
