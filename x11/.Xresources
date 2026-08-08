@@ -2,15 +2,22 @@ XTerm.termName: xterm-256color
 
 ! ## Set font and fontsize ##
 Xterm*renderFont: true
-! XTerm*faceName: JetBrains Mono Nerd Font Mono
+! XTerm*faceName: JetBrains Mono Nerd Font
 XTerm*faceName: CaskaydiaCove Nerd Font Mono
-XTerm*faceSize: 14
+XTerm*faceSize: 13
+XTerm*renderFont: true
+Xterm*utf8: 1
 
 ! Remove internal border
 XTerm*internalBorder: 6
 XTerm*borderWidth: 0
 
-xterm*cursorBlink: true
+! Cursor blink
+xterm*cursorBlink: false
+
+! Cursor theme
+Xcursor.theme: Bibata-Modern-Classic
+xcursor.size: 26
 
 ! Scroll to bottom when typing
 xterm*scrollKey: true
