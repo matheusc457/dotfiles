@@ -1,27 +1,26 @@
 XTerm.termName: xterm-256color
 
 ! ## Set font and fontsize ##
-Xterm*renderFont: true
+XTerm*renderFont: true
 ! XTerm*faceName: JetBrains Mono Nerd Font
 XTerm*faceName: CaskaydiaCove Nerd Font Mono
 XTerm*faceSize: 13
-XTerm*renderFont: true
-Xterm*utf8: 1
+XTerm*utf8: 1
 
 ! Remove internal border
 XTerm*internalBorder: 6
 XTerm*borderWidth: 0
 
 ! Cursor blink
-xterm*cursorBlink: false
+XTerm*cursorBlink: false
 
 ! Cursor theme
 Xcursor.theme: Bibata-Modern-Classic
-xcursor.size: 26
+Xcursor.size: 26
 
 ! Scroll to bottom when typing
-xterm*scrollKey: true
-xterm*scrollTtyOutput: false
+XTerm*scrollKey: true
+XTerm*scrollTtyOutput: false
 
 ! VT Font Menu: Unreadable
 XTerm*faceSize1: 8
@@ -39,8 +38,6 @@ XTerm*faceSize6: 24
 ! ## Scrollbar ##
 XTerm*vt100.scrollBar: false
 
-XTerm*cursorBlink: false
-
 ! Do not scroll when there is new input
 XTerm*scrollTtyOutput: false
 
@@ -48,7 +45,7 @@ XTerm*scrollTtyOutput: false
 ! Lines of output you can scroll back over
 XTerm*saveLines: 15000
 
-! Enable copy/paste hotkeyes (mouse highlight = copy ,  shift+Insert = paste)
+! Enable copy/paste hotkeys (mouse highlight = copy, shift+Insert = paste)
 XTerm*selectToClipboard: true
 
 ! ## Select text ##
@@ -63,6 +60,46 @@ XTerm*vt100.translations: #override \n\
   Ctrl <Key>0: set-vt-font(d) \n\
   Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+! ## URxvt ##
+
+URxvt.termName: rxvt-unicode-256color
+
+! ## Set font and fontsize ##
+URxvt.font: xft:CaskaydiaCove Nerd Font Mono:size=13
+URxvt.boldFont: xft:CaskaydiaCove Nerd Font Mono:bold:size=13
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+
+! Remove internal border
+URxvt.internalBorder: 6
+URxvt.borderLess: true
+
+! Cursor blink
+URxvt.cursorBlink: false
+
+! Do not scroll when there is new input
+URxvt.scrollTtyOutput: false
+
+! Lines of output you can scroll back over
+URxvt.saveLines: 15000
+
+! ## Scrollbar ##
+URxvt.scrollBar: false
+
+! Select text
+URxvt.trimSelection: true
+
+! Perl extensions
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
+! Pseudo-transparency
+! URxvt.depth: 32
+! URxvt.background: [90]#2E3440
 
 ! Nord Theme
 #define nord0 #2E3440
