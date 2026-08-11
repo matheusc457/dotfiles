@@ -1,5 +1,20 @@
 source ~/.vim/keybinds.vim
 
+call plug#begin()
+
+Plug 'tpope/vim-sensible'
+Plug 'itchyny/lightline.vim'
+Plug 'nordtheme/vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'yegappan/lsp'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
+
+call plug#end()
+
+source ~/.vim/coc.vim
+
 syntax on
 set number
 set mouse=a
@@ -12,20 +27,6 @@ set tabstop=4
 set smartindent
 
 set backspace=indent,eol,start
-
-call plug#begin()
-
-Plug 'morhetz/gruvbox'
-Plug 'tpope/vim-sensible'
-Plug 'itchyny/lightline.vim'
-Plug 'nordtheme/vim'
-Plug 'ryanoasis/vim-devicons'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'yegappan/lsp'
-
-call plug#end()
 
 set bg=dark
 set termguicolors
