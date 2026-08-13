@@ -16,7 +16,7 @@ XTerm*cursorBlink: false
 
 ! Cursor theme
 Xcursor.theme: Bibata-Modern-Classic
-Xcursor.size: 26
+Xcursor.size: 20
 
 ! Scroll to bottom when typing
 XTerm*scrollKey: true

@@ -15,6 +15,7 @@ This repository was created to store and preserve my dotfiles to use as a backup
 - Wallpapers (Backgrounds used by i3)
 - .Xresources (XTerm config)
 - .vimrc (Vim config)
+- Fuzzel (Application launcher_
 - .bashrc (Bash config)
 
 ## Requirements
@@ -28,6 +29,7 @@ This repository was created to store and preserve my dotfiles to use as a backup
 - fastfetch
 - rofi
 - xterm
+- fuzzel
 - A Nerd Font: [CaskaydiaCove Nerd Font](https://www.nerdfonts.com/font-downloads) and [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
 
 ## Installation
@@ -36,7 +38,7 @@ These dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/).
 ```bash
 git clone https://github.com/matheusc457/dotfiles ~/dotfiles
 cd ~/dotfiles
-stow bash vim x11 fastfetch foot i3 mako polybar rofi sway waybar wallpapers
+stow bash vim x11 fastfetch foot fuzzel i3 mako polybar rofi sway waybar wallpapers
 ```
 
 After stowing, make all shell scripts executable:

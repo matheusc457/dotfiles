@@ -6,17 +6,14 @@ Plug 'tpope/vim-sensible'
 Plug 'itchyny/lightline.vim'
 Plug 'nordtheme/vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'yegappan/lsp'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-source ~/.vim/coc.vim
-
 syntax on
 set number
+set relativenumber
 set mouse=a
 
 filetype plugin indent on
@@ -30,8 +27,8 @@ set backspace=indent,eol,start
 
 set bg=dark
 set termguicolors
-colorscheme nord
+colorscheme gruvbox
 
-let g:lightline = {'colorscheme' : 'nord'}
+let g:lightline = {'colorscheme' : 'gruvbox'}
 
 set encoding=UTF-8

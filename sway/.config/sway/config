@@ -16,7 +16,7 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu rofi
+set $menu fuzzel
 # Lock method
 set $lock swaylock
 
@@ -24,10 +24,12 @@ set $lock swaylock
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/matheus/wallpapers/black_hole-wallpaper.png fill
+output * bg /home/matheus/wallpapers/atoms.png fill
 
 # titlebar_padding 1
 # titlebar_border_thickness 0
+
+include ~/.config/sway/colors-gruvbox
 
 default_border pixel 1
 gaps inner 5
@@ -73,7 +75,7 @@ input type:keyboard {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu -show drun
+    bindsym $mod+d exec $menu
 
     # Start lock method
     bindsym $mod+Shift+l $lock 
@@ -232,14 +234,20 @@ bindsym $mod+r mode "resize"
 bar {
     position top
 
-    # When the status_command prints a new line to stdout, swaybar updates.
+    # When the status_command prints a new line to stdout, sway>
     # The default just shows the current date and time.
     status_command while date +'%d-%m-%Y %X'; do sleep 1; done
 
     colors {
-        statusline #ffffff
-        background #323232
-        # inactive_workspace #32323200 #32323200 #5c5c5c
+        statusline $base05
+        background $base00
+        separator  $base02
+
+        focused_workspace  $base0D $base0D $base00
+        active_workspace   $base02 $base02 $base05
+        inactive_workspace $base01 $base01 $base04
+        urgent_workspace   $base08 $base08 $base00
+        binding_mode       $base0E $base0E $base00
     }
 }
 
