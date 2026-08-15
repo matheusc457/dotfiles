@@ -13,9 +13,9 @@ This repository was created to store and preserve my dotfiles to use as a backup
 - Fastfetch (System information displayer)
 - Rofi (Application launcher)
 - Wallpapers (Backgrounds used by i3)
+- Fuzzel (Application launcher)
 - .Xresources (XTerm config)
 - .vimrc (Vim config)
-- Fuzzel (Application launcher_
 - .bashrc (Bash config)
 
 ## Requirements
@@ -28,9 +28,9 @@ This repository was created to store and preserve my dotfiles to use as a backup
 - waybar
 - fastfetch
 - rofi
-- xterm
 - fuzzel
 - A Nerd Font: [CaskaydiaCove Nerd Font](https://www.nerdfonts.com/font-downloads) and [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
+- [st](https://github.com/matheusc457/st) 
 
 ## Installation
 These dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/).
@@ -47,7 +47,8 @@ find ~/dotfiles -name "*.sh" -exec chmod +x {} \;
 ```
 
 ## Notes
-WiFi RTL8723AE causing IRQ storm/high CPU? Fix: add pcie_aspm.policy=performance to GRUB_CMDLINE_LINUX_DEFAULT int /etc/default/grub, run sudo grub-mkconfig -o /boot/grub/grub.cfg, reboot.
+WiFi RTL8723AE causing IRQ storm/high CPU?
+Fix: add pcie_aspm.policy=performance to GRUB_CMDLINE_LINUX_DEFAULT int /etc/default/grub, run sudo grub-mkconfig -o /boot/grub/grub.cfg, reboot.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
