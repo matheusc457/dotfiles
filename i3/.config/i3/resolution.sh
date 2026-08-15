@@ -17,4 +17,4 @@ fi
 xrandr --output "$OUTPUT" --mode "$MODE"
 
 # Wallpaper
-sleep 2 && feh --bg-fill /home/matheus/wallpapers/black_hole-wallpaper.png
+sleep 2 && feh --bg-fill /home/matheus/wallpapers/arch.png
