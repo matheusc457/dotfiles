@@ -69,16 +69,16 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# Nord colors
+# Dracula Theme
 
-client.focused          #88C0D0 #2E3440 #ECEFF4 #88C0D0 #88C0D0
-client.focused_inactive #4C566A #2E3440 #D8DEE9 #4C566A #4C566A
-client.unfocused        #3B4252 #2E3440 #D8DEE9 #3B4252 #3B4252
-client.urgent           #BF616A #2E3440 #ECEFF4 #BF616A #BF616A
-client.placeholder      #434C5E #2E3440 #D8DEE9 #434C5E #434C5E
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
-client.background       #2E3440
-
+client.background       #F8F8F2
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

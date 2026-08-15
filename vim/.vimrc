@@ -8,6 +8,7 @@ Plug 'nordtheme/vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
@@ -27,8 +28,8 @@ set backspace=indent,eol,start
 
 set bg=dark
 set termguicolors
-colorscheme gruvbox
+colorscheme dracula
 
-let g:lightline = {'colorscheme' : 'gruvbox'}
+let g:lightline = {'colorscheme' : 'dracula'}
 
 set encoding=UTF-8
