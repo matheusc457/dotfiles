@@ -46,6 +46,8 @@ After stowing, make all shell scripts executable:
 find ~/dotfiles -name "*.sh" -exec chmod +x {} \;
 ```
 
+## Notes
+WiFi RTL8723AE causing IRQ storm/high CPU? Fix: add pcie_aspm.policy=performance to GRUB_CMDLINE_LINUX_DEFAULT int /etc/default/grub, run sudo grub-mkconfig -o /boot/grub/grub.cfg, reboot.
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
