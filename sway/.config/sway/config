@@ -16,25 +16,12 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu fuzzel
-# Lock method
-set $lock swaylock
+set $menu wmenu-run
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/matheus/wallpapers/atoms.png fill
-
-# titlebar_padding 1
-# titlebar_border_thickness 0
-
-include ~/.config/sway/colors-gruvbox
-
-default_border pixel 1
-gaps inner 5
-gaps outer 5
-
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
@@ -56,11 +43,20 @@ gaps outer 5
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
-
-input type:keyboard {
-  xkb_layout br
-  
+#
+# Example configuration:
+#
+#   input type:touchpad {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+#
+input * {
+       xkb_layout br
 }
+#
 # You can also configure each device individually.
 # Read `man 5 sway-input` for more information about this section.
 
@@ -77,9 +73,6 @@ input type:keyboard {
     # Start your launcher
     bindsym $mod+d exec $menu
 
-    # Start lock method
-    bindsym $mod+Shift+l $lock 
-
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -88,7 +81,7 @@ input type:keyboard {
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+r reload
+    bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -106,11 +99,11 @@ input type:keyboard {
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
 
-# Move the focused window with the same, but add Shift
+    # Move the focused window with the same, but add Shift
     bindsym $mod+Shift+$left move left
     bindsym $mod+Shift+$down move down
     bindsym $mod+Shift+$up move up
-    # bindsym $mod+Shift+$right move right
+    bindsym $mod+Shift+$right move right
     # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
@@ -234,25 +227,15 @@ bindsym $mod+r mode "resize"
 bar {
     position top
 
-    # When the status_command prints a new line to stdout, sway>
+    # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%d-%m-%Y %X'; do sleep 1; done
+    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
     colors {
-        statusline $base05
-        background $base00
-        separator  $base02
-
-        focused_workspace  $base0D $base0D $base00
-        active_workspace   $base02 $base02 $base05
-        inactive_workspace $base01 $base01 $base04
-        urgent_workspace   $base08 $base08 $base00
-        binding_mode       $base0E $base0E $base00
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
-
-#bar {
-#  swaybar_command waybar
-#}
 
 include /etc/sway/config.d/*
