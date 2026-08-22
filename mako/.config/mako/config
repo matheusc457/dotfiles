@@ -1,11 +1,9 @@
-font=Inter 10
-backgroud-color=#1e1e2e
-text-color=#cdd6f4
-padding=10
-border-radius=8
-default-timeout=5000
-show-age=false
-ignore-messages=()
-anchor=top-right
-margin=10
-spacing=5
+[app-name=wp-vol]
+layer=overlay
+history=0
+anchor=top-center
+group-by=app-name
+format=<b>%s</b>\n%b
+
+[app-name=volume group-index=0]
+invisible=0
