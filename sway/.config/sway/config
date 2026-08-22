@@ -17,6 +17,12 @@ set $right l
 set $term foot
 # Your preferred application launcher
 set $menu wmenu-run
+# Your preferred browser
+set $browser helium
+
+default_border pixel 2
+gaps inner 8
+gaps outer 5
 
 ### Output configuration
 #
@@ -73,6 +79,9 @@ input * {
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # Start the browser
+    bindsym $mod+c exec $browser
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -81,7 +90,7 @@ input * {
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -217,6 +226,16 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
+    #bindsym XF86AudioRaiseVolume exec volumectl -u up
+    #bindsym XF86AudioLowerVolume exec volumectl -u down
+    #bindsym XF86AudioMute exec volumectl toggle-mute
+    #bindsym XF86AudioMicMute exec volumectl -m toggle-mute
+
+    #bindsym XF86MonBrightnessUp exec lightctl up
+    #bindsym XF86MonBrightnessDown exec lightctl down
+
+    #exec "avizo-service"
+
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
@@ -229,8 +248,9 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
+    #status_command ~/.config/sway/statusbar.sh
+    status_command while date +'%Y-%m-%d %H:%M'; do sleep 1; done
+    
     colors {
         statusline #ffffff
         background #323232

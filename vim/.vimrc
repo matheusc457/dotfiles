@@ -28,8 +28,8 @@ set backspace=indent,eol,start
 
 set bg=dark
 set termguicolors
-colorscheme dracula
+"colorscheme dracula
 
-let g:lightline = {'colorscheme' : 'dracula'}
+let g:lightline = {'colorscheme' : 'default'}
 
 set encoding=UTF-8
