@@ -25,7 +25,10 @@ smart_borders on
 hide_edge_borders both
 
 # Custom Resolution
-exec_always --no-startup-id ~/.config/i3/resolution.sh
+#exec_always --no-startup-id ~/.config/i3/resolution.sh
+exec_always --no-startup-id xrandr --output LVDS-1 --mode "1024x600"
+exec_always --no-startup-id feh --bg-fill /home/matheus/wallpapers/arch.png
+
 # exec_always --no-startup-id xrandr --newmode "1280x720_60.00"   74.50  1280 1344 1472 1664  720 723 728 748 -hsync +vsync
 # exec_always --no-startup-id xrandr --addmode LVDS-1 "1280x720_60.00"
 # exec_always --no-startup-id xrandr --output LVDS-1 --mode "1280x720_60.00"
@@ -96,9 +99,9 @@ bindsym $mod+Shift+q kill
 # start firefox
 bindsym $mod+f exec firefox
 
-# start rofi (a program launcher)
-#bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec --no-startup-id rofi -show drun
+# start program launcher
+bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # start i3lock-color
 bindsym $mod+Shift+l exec --no-startup-id ~/.config/i3/lock.sh
